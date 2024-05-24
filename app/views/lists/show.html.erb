@@ -1,5 +1,8 @@
-<h1><%= @list.name %></h1>
-<div class="d-flex">
+<div class='banner', style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @list.photo.key, height: 300, crop: :fill %>')">
+  <h1><%= @list.name %></h1>
+</div>
+
+<div class="d-flex border rounded bg-light p-2 m-4">
   <% @list.bookmarks.each do |bookmark| %>
     <div class='movie-card'>
       <img src="<%= bookmark.movie.poster_url%>" alt="Movie poster">

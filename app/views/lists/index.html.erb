@@ -5,9 +5,13 @@
     <div class="card">
       <%= list.name %>
       <%= list.movies.length %>
+      <% if list.photo.attached?%>
+        <%= cl_image_tag list.photo.key, height: 300, crop: :fill, width: 1000 %>
+      <% end %>
       <%= link_to 'See the list', list_path(list) %>
     </div>
   </div>
 <% end %>
+
 
 <%= link_to 'new list', new_list_path%>
