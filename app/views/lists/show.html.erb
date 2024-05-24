@@ -1,0 +1,13 @@
+<h1><%= @list.name %></h1>
+<div class="d-flex">
+  <% @list.bookmarks.each do |bookmark| %>
+    <div class='movie-card'>
+      <img src="<%= bookmark.movie.poster_url%>" alt="Movie poster">
+      <span><%= bookmark.movie.title %></span>
+      <span><%= bookmark.comment %></span>
+      <span><%= link_to 'X', bookmark_path(bookmark), data: { turbo_method: :delete, turbo_confirm: 'Sure ?' } %></span>
+    </div>
+  <% end %>
+</div>
+
+<%= render 'bookmarks/form' %>

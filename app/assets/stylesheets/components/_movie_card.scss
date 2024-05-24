@@ -1,0 +1,13 @@
+.movie-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid grey;
+  border-radius: 1rem;
+  background-color: #EEEEDD;
+  flex: 1;
+
+
+  img {
+    width: 10rem;
+  }
+}

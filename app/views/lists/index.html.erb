@@ -1,0 +1,11 @@
+<h1>Lists</h1>
+
+<% @lists.each do |list| %>
+  <div class='card-container'>
+    <div class="card">
+      <%= list.name %>
+      <%= list.movies.length %>
+      <%= link_to 'See the list', list_path(list) %>
+    </div>
+  </div>
+<% end %>
